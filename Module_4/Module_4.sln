@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controleurs", "Controleurs\Controleurs.csproj", "{98504EFE-BD18-4688-AB68-CCCA3ECBA911}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98504EFE-BD18-4688-AB68-CCCA3ECBA911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98504EFE-BD18-4688-AB68-CCCA3ECBA911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98504EFE-BD18-4688-AB68-CCCA3ECBA911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98504EFE-BD18-4688-AB68-CCCA3ECBA911}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17105A73-ABFD-4281-8DF9-C69E92E11315}
+	EndGlobalSection
+EndGlobal
