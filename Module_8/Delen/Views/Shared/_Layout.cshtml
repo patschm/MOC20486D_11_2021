@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @RenderSection("TITLE", false)
+</head>
+<body>
+    <header>
+        <h1>Company ACME</h1>
+        <nav>
+            <a href="/Home/Index">Index</a>
+            <a href="/Home/Index2">Index 2</a>
+            <a href="/Home/Index3">Index 3</a>
+            <a href="/Home/Index4">Index 4</a>
+        </nav>
+
+    </header>
+    <content>
+        @RenderBody()
+    </content>
+    <footer>
+        <address>
+            Blaweg 42
+        </address>
+        <h3>Disclaimer etc</h3>
+    </footer>
+</body>
+</html>

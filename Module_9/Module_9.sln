@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientSideMeuk", "ClientSideMeuk\ClientSideMeuk.csproj", "{9C15DD37-3720-44A1-AC40-DEAA1A47B84E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuinhopenVanClients", "PuinhopenVanClients\PuinhopenVanClients.csproj", "{3B09FEB8-9676-4FEA-A588-E1F3D04F26B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C15DD37-3720-44A1-AC40-DEAA1A47B84E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C15DD37-3720-44A1-AC40-DEAA1A47B84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C15DD37-3720-44A1-AC40-DEAA1A47B84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C15DD37-3720-44A1-AC40-DEAA1A47B84E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B09FEB8-9676-4FEA-A588-E1F3D04F26B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B09FEB8-9676-4FEA-A588-E1F3D04F26B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B09FEB8-9676-4FEA-A588-E1F3D04F26B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B09FEB8-9676-4FEA-A588-E1F3D04F26B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {158AA1B4-D17A-46BE-9915-DED795E81722}
+	EndGlobalSection
+EndGlobal

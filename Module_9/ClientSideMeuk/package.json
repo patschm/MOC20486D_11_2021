@@ -1,0 +1,16 @@
+{
+  "name": "clientsidemeuk",
+  "version": "1.0.0",
+  "description": "Ok",
+  "scripts": {
+    "test": "dotnet run",
+    "build": "babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "sass": "^1.43.4"
+  }
+}

@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewData["Title"] = "Geheim";
+}
+
+<h1>Geheim</h1>
+<h1>Hoi @User.Identity.Name</h1>
+@foreach(var claim in User.Claims)
+{
+    <h3>@claim.Type</h3><h3><b>@claim.Value</b></h3>
+}

@@ -1,0 +1,35 @@
+﻿:root {
+    --test: green;
+}
+
+.bla {
+    background-color: var(--test);
+    color: blue;
+}
+
+.bord {
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+h1 {
+    background-color: aqua;
+    color: red;
+}
+
+#bliep {
+    background-color: blue;
+    color: yellow;
+}
+
+div.bla {
+    background-color: aquamarine;
+    color: purple;
+}
+
+h1[class=bla] {
+}
+
+h1:nth-child(2n) {
+    background-color: red;
+}

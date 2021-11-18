@@ -1,0 +1,20 @@
+﻿$back:blue;
+
+@mixin font($sz) {
+    @if($sz > 2rem)
+    {
+        font-family: 'Comic Sans MS';
+    }
+    @else
+    {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    font-size: $sz;
+}
+
+.mooi
+{
+    color:$back;
+    @include font(10rem);
+}
+
