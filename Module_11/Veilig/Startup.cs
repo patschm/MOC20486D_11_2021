@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Veilig
@@ -20,7 +21,11 @@ namespace Veilig
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opts=> {
                 opts.LoginPath = "/Account/Login";
             });
-            services.AddAuthorization();
+            services.AddAuthorization(opts=> {
+                opts.AddPolicy("circus", pol => {
+                    pol.RequireClaim(ClaimTypes.Actor, "Clown");
+                });
+            });
             services.AddControllersWithViews();
         }
 

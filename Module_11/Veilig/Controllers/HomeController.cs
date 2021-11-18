@@ -13,7 +13,7 @@ namespace Veilig.Controllers
         {
             return View();
         }
-        [Authorize]
+        [Authorize(Policy = "circus")]
         public IActionResult Geheim()
         {
             return View();
