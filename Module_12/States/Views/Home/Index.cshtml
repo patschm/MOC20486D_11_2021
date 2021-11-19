@@ -1,0 +1,30 @@
+﻿@model List<string>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+
+
+    @foreach(var str in Model)
+            {
+                <h1>@str</h1>
+            }
+
+    <script>
+        localStorage.setItem("list", ["aaa", "bbb"]);
+
+
+        var data = localStorage.getItem("list");
+        console.log(data);
+    </script>
+</body>
+</html>

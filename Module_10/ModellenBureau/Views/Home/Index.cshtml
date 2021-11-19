@@ -1,0 +1,27 @@
+﻿@model ModellenBureau.Models.PersonViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hallo</title>
+</head>
+<body>
+    <form action="/Home/Post" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        @Html.EditorForModel()
+
+        @*@Html.HiddenFor(m => m.Id)<br/>
+        @Html.TextBoxFor(m => m.FirstName)<br />
+        @Html.TextBoxFor(m => m.LastName)<br />
+        @Html.TextBoxFor(m => m.BirthDay, htmlAttributes:new { type = "date" })<br />
+        @Html.HiddenFor(m=>m.DirtySecrets)<br />*@
+
+        @*<input type="hidden" asp-for="@Model.Id" /><br />
+        <input type="text" asp-for="@Model.FirstName" /><br />
+        <input type="text" asp-for="@Model.LastName" /><br />
+        <input type="date" asp-for="@Model.BirthDay" /><br />
+        <input type="hidden" asp-for="@Model.DirtySecrets" /><br />*@
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

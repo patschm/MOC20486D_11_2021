@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veilig", "Veilig\Veilig.csproj", "{179C0D71-144E-43B7-9ED8-D8C08BB200D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veilig", "Veilig\Veilig.csproj", "{179C0D71-144E-43B7-9ED8-D8C08BB200D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Principals", "Principals\Principals.csproj", "{1113D794-6DA2-4E5D-B6C2-3961D41D1078}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{031E0540-1CF4-44BE-B0F3-18ADD079BDC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackingDemo", "HackingDemo\HackingDemo.csproj", "{F9EBC576-2C70-4789-A5E0-668E65EA2281}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{1113D794-6DA2-4E5D-B6C2-3961D41D1078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1113D794-6DA2-4E5D-B6C2-3961D41D1078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1113D794-6DA2-4E5D-B6C2-3961D41D1078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{031E0540-1CF4-44BE-B0F3-18ADD079BDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031E0540-1CF4-44BE-B0F3-18ADD079BDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031E0540-1CF4-44BE-B0F3-18ADD079BDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031E0540-1CF4-44BE-B0F3-18ADD079BDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9EBC576-2C70-4789-A5E0-668E65EA2281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9EBC576-2C70-4789-A5E0-668E65EA2281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9EBC576-2C70-4789-A5E0-668E65EA2281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9EBC576-2C70-4789-A5E0-668E65EA2281}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

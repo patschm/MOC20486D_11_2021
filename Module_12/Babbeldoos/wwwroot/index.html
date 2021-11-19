@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery/jquery.js"></script>
+    <script src="lib/microsoft-signalr/signalr.js"></script>
+</head>
+<body>
+    <h1>Super Zeurver</h1>
+    <input type="text" id="txt_nick" placeholder="Uw nick" /><button id="btn_reg">Register</button>
+    <hr/>
+    <input type="text" id="txt_msg" /><button id="btn_send">Verstuur</button>
+    <hr/>
+    <div id="msgs"></div>
+
+    <script>
+        $(document).ready(function () {
+            let $txt_nick = $("#txt_nick");
+            let $txt_msg = $("#txt_msg");
+            let $msgs = $("#msgs");
+
+            let connection = new signalR.HubConnectionBuilder().withUrl("/signaal").build();
+            connection.start().then(function () {
+                connection.on("victim", function (msg) {
+                    $("<h4>").text(msg).appendTo("#msgs");
+                });
+                connection.on("toeter", function (msg) {
+                    $("<h4>").css("color","red").text(msg).appendTo($msgs);
+                });
+            })           
+
+            $("#btn_reg").click(function () {
+               
+                connection.invoke("MeldAan", $txt_nick.val());
+            });
+            $("#btn_send").click(function () {
+                connection.invoke("Zend", $txt_nick.val(), $txt_msg.val());
+            });
+        });
+    </script>
+</body>
+</html>

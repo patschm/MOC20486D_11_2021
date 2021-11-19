@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -9,18 +11,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Veilig.IdentityWare;
 
 namespace Veilig
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
+        private string conStr = @"Server=.\sqlexpress;Database=VeiligDb;Trusted_Connection=True;MultipleActiveResultSets=true;";
+
+       public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opts=> {
+            services.AddDbContext<MyDbContext>(opts => {
+                opts.UseSqlServer(conStr);
+            });
+            services.AddIdentity<MyUser, IdentityRole>().AddEntityFrameworkStores<MyDbContext>();
+
+            // Optioneel. Dit is default
+            services.ConfigureApplicationCookie(opts =>
+            {
                 opts.LoginPath = "/Account/Login";
             });
+
+            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opts=> {
+            //    opts.LoginPath = "/Account/Login";
+            //});
             services.AddAuthorization(opts=> {
                 opts.AddPolicy("circus", pol => {
                     pol.RequireClaim(ClaimTypes.Actor, "Clown");
